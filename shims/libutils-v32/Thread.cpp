@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020-2022 The LineageOS Project
+ * Copyright (C) 2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,17 @@
  * limitations under the License.
  */
 
-#pragma once
+#include <utils/StrongPointer.h>
 
-/*
- * Board specific nodes
- *
- * If your kernel exposes these controls in another place, you can either
- * symlink to the locations given here, or override this header in your
- * device tree.
- */
-#define PANEL_BRIGHTNESS_NODE "/sys/class/backlight/panel/brightness"
-#define PANEL_MAX_BRIGHTNESS_NODE "/sys/class/backlight/panel/max_brightness"
+#include "Thread.h"
+
+using android::sp;
+
+namespace utils32 {
+
+android::status_t Thread::run(const char* name, int32_t priority, size_t stack) {
+    this->forceIncStrong(this);
+    return android::Thread::run(name, priority, stack);
+}
+
+} // namespace utils32
