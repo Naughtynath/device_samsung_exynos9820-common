@@ -33,9 +33,6 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     libtinycompress
 
-PRODUCT_PACKAGES += \
-    SamsungDAP
-
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
@@ -81,10 +78,6 @@ PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
     gralloc.exynos9820 \
     libion
-
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
 
 # DRM
 PRODUCT_PACKAGES += \
