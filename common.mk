@@ -57,6 +57,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6-service_64.exynos9820 \
     libsensorndkbridge
 
+PRODUCT_PACKAGES += \ 
+    GCamGOPrebuilt-V3_8
+
 PRODUCT_PACKAGES += \
     libhwjpeg
 
